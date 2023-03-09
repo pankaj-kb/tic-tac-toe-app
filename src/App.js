@@ -20,12 +20,13 @@ const App = () => {
     player === "cross"
       ? setCrossScore(crossScore + 1)
       : setCircleScore(circleScore + 1);
+    setWinMessage(`${player} won`);
   };
 
   const resetScore = (event) => {
-    setCircleScore(0)
-    setCrossScore(0)
-  }
+    setCircleScore(0);
+    setCrossScore(0);
+  };
 
   const reloadGame = () => {
     setIsCross(false);
@@ -39,7 +40,6 @@ const App = () => {
       itemArray[0] === itemArray[2] &&
       itemArray[0] !== "empty"
     ) {
-      setWinMessage(`${itemArray[0]} won`);
       let player = itemArray[0];
       manageScore(player);
     } else if (
@@ -47,7 +47,6 @@ const App = () => {
       itemArray[3] === itemArray[4] &&
       itemArray[3] === itemArray[5]
     ) {
-      setWinMessage(`${itemArray[3]} won`);
       let player = itemArray[3];
       manageScore(player);
     } else if (
@@ -55,7 +54,6 @@ const App = () => {
       itemArray[6] === itemArray[7] &&
       itemArray[6] === itemArray[8]
     ) {
-      setWinMessage(`${itemArray[6]} won`);
       let player = itemArray[6];
       manageScore(player);
     } else if (
@@ -63,7 +61,6 @@ const App = () => {
       itemArray[0] === itemArray[3] &&
       itemArray[0] === itemArray[6]
     ) {
-      setWinMessage(`${itemArray[0]} won`);
       let player = itemArray[0];
       manageScore(player);
     } else if (
@@ -71,7 +68,6 @@ const App = () => {
       itemArray[1] === itemArray[4] &&
       itemArray[1] === itemArray[7]
     ) {
-      setWinMessage(`${itemArray[1]} won`);
       let player = itemArray[1];
       manageScore(player);
     } else if (
@@ -79,7 +75,6 @@ const App = () => {
       itemArray[2] === itemArray[5] &&
       itemArray[2] === itemArray[8]
     ) {
-      setWinMessage(`${itemArray[2]} won`);
       let player = itemArray[2];
       manageScore(player);
     } else if (
@@ -87,7 +82,6 @@ const App = () => {
       itemArray[0] === itemArray[4] &&
       itemArray[0] === itemArray[8]
     ) {
-      setWinMessage(`${itemArray[0]} won`);
       let player = itemArray[0];
       manageScore(player);
     } else if (
@@ -95,8 +89,7 @@ const App = () => {
       itemArray[2] === itemArray[4] &&
       itemArray[2] === itemArray[6]
     ) {
-      setWinMessage(`${itemArray[2]} won`);
-      let player = itemArray[0];
+      let player = itemArray[2];
       manageScore(player);
     }
   };
@@ -145,7 +138,7 @@ const App = () => {
           </div>
         </Col>
       </Row>
-      <Points crossScore={crossScore} circleScore={circleScore}  />
+      <Points crossScore={crossScore} circleScore={circleScore} />
       <button onClick={resetScore}>Reset Score</button>
     </Container>
   );
