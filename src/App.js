@@ -16,9 +16,16 @@ const App = () => {
   const [crossScore, setCrossScore] = useState(0);
   const [circleScore, setCircleScore] = useState(0);
 
-  // const manageScore = () => {
+  const manageScore = (player) => {
+    player === "cross"
+      ? setCrossScore(crossScore + 1)
+      : setCircleScore(circleScore + 1);
+  };
 
-  // }
+  const resetScore = (event) => {
+    setCircleScore(0)
+    setCrossScore(0)
+  }
 
   const reloadGame = () => {
     setIsCross(false);
@@ -33,72 +40,64 @@ const App = () => {
       itemArray[0] !== "empty"
     ) {
       setWinMessage(`${itemArray[0]} won`);
-      itemArray[0] === "cross"
-        ? setCrossScore(crossScore + 1)
-        : setCircleScore(circleScore + 1);
+      let player = itemArray[0];
+      manageScore(player);
     } else if (
       itemArray[3] !== "empty" &&
       itemArray[3] === itemArray[4] &&
       itemArray[3] === itemArray[5]
     ) {
       setWinMessage(`${itemArray[3]} won`);
-      itemArray[3] === "cross"
-        ? setCrossScore(crossScore + 1)
-        : setCircleScore(circleScore + 1);
+      let player = itemArray[3];
+      manageScore(player);
     } else if (
       itemArray[6] !== "empty" &&
       itemArray[6] === itemArray[7] &&
       itemArray[6] === itemArray[8]
     ) {
       setWinMessage(`${itemArray[6]} won`);
-      itemArray[6] === "cross"
-        ? setCrossScore(crossScore + 1)
-        : setCircleScore(circleScore + 1);
+      let player = itemArray[6];
+      manageScore(player);
     } else if (
       itemArray[0] !== "empty" &&
       itemArray[0] === itemArray[3] &&
       itemArray[0] === itemArray[6]
     ) {
       setWinMessage(`${itemArray[0]} won`);
-      itemArray[0] === "cross"
-        ? setCrossScore(crossScore + 1)
-        : setCircleScore(circleScore + 1);
+      let player = itemArray[0];
+      manageScore(player);
     } else if (
       itemArray[1] !== "empty" &&
       itemArray[1] === itemArray[4] &&
       itemArray[1] === itemArray[7]
     ) {
       setWinMessage(`${itemArray[1]} won`);
-      itemArray[1] === "cross"
-        ? setCrossScore(crossScore + 1)
-        : setCircleScore(circleScore + 1);
+      let player = itemArray[1];
+      manageScore(player);
     } else if (
       itemArray[2] !== "empty" &&
       itemArray[2] === itemArray[5] &&
       itemArray[2] === itemArray[8]
     ) {
       setWinMessage(`${itemArray[2]} won`);
-      itemArray[2] === "cross"
-        ? setCrossScore(crossScore + 1)
-        : setCircleScore(circleScore + 1);
+      let player = itemArray[2];
+      manageScore(player);
     } else if (
       itemArray[0] !== "empty" &&
       itemArray[0] === itemArray[4] &&
       itemArray[0] === itemArray[8]
     ) {
       setWinMessage(`${itemArray[0]} won`);
-      itemArray[0] === "cross"
-        ? setCrossScore(crossScore + 1)
-        : setCircleScore(circleScore + 1);
+      let player = itemArray[0];
+      manageScore(player);
     } else if (
       itemArray[2] !== "empty" &&
       itemArray[2] === itemArray[4] &&
       itemArray[2] === itemArray[6]
     ) {
       setWinMessage(`${itemArray[2]} won`);
-      itemArray[2] === "cross"
-        ? setCrossScore(crossScore + 1)
-        : setCircleScore(circleScore + 1);
+      let player = itemArray[0];
+      manageScore(player);
     }
   };
 
@@ -146,7 +145,8 @@ const App = () => {
           </div>
         </Col>
       </Row>
-      <Points crossScore={crossScore} circleScore={circleScore} />
+      <Points crossScore={crossScore} circleScore={circleScore}  />
+      <button onClick={resetScore}>Reset Score</button>
     </Container>
   );
 };

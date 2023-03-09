@@ -6,8 +6,9 @@ function Points({ crossScore, circleScore }) {
       <div className="Cross Score">
         <h1>Cross Score : {crossScore}</h1>
       </div>
-      <div className="Circle Score"></div>
-      <h1>Cicrcle Score : {circleScore}</h1>
+      <div className="Circle Score">
+        <h1>Cicrcle Score : {circleScore}</h1>
+      </div>
     </div>
   );
 }
