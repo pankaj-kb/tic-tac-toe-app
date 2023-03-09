@@ -20,7 +20,7 @@ const App = () => {
     player === "cross"
       ? setCrossScore(crossScore + 1)
       : setCircleScore(circleScore + 1);
-    setWinMessage(`${player} won`);
+    setWinMessage(`${player} won`)
   };
 
   const resetScore = (event) => {
@@ -118,13 +118,15 @@ const App = () => {
               <h1 className="text-success text-uppercase text-center">
                 {winMessage}
               </h1>
-              <Button color="success" block onClick={reloadGame}>
+              <Button className="reloadButton" color="success" block onClick={reloadGame}>
                 Reload the Game{" "}
               </Button>
             </div>
           ) : (
-            <h1 className="text-center text warning">
-              {isCross ? "Cross" : "Circle"} turns
+            <h1
+              className={`text-center ${isCross ? "crossIcon" : "circleIcon"}`}
+            >
+              Play {isCross ? "X" : "O"}
             </h1>
           )}
           <div className="grid">
