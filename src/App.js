@@ -138,8 +138,12 @@ const App = () => {
           </div>
         </Col>
       </Row>
-      <Points crossScore={crossScore} circleScore={circleScore} />
-      <button onClick={resetScore}>Reset Score</button>
+      <div className="scoreSection">
+        <Points crossScore={crossScore} circleScore={circleScore} />
+        <Button className="resetButton" onClick={resetScore}>
+          Reset Score
+        </Button>
+      </div>
     </Container>
   );
 };
