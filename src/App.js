@@ -96,7 +96,7 @@ const App = () => {
 
   const changeItem = (itemNumber) => {
     if (winMessage) {
-      return toast(winMessage, { type: "success" });
+      return toast("Game Over Please Reload", { type: "success" });
     }
 
     if (itemArray[itemNumber] === "empty") {
@@ -114,22 +114,14 @@ const App = () => {
       <Row>
         <Col md={6} className="offset-md-3">
           {winMessage ? (
-            <div className="mb-2 mt-2">
+            <div className="mt-2">
               <h1
                 className={`text-uppercase text-center ${
-                  winMessage === "CIRCLE WON" ? ".crossIcon" : "circleIcon"
+                  winMessage === "X Won" ? "crossIcon" : "circleIcon"
                 }`}
               >
                 {winMessage}
               </h1>
-              <Button
-                className="reloadButton"
-                color="success"
-                block
-                onClick={reloadGame}
-              >
-                Reload the Game{" "}
-              </Button>
             </div>
           ) : (
             <h1
@@ -153,6 +145,14 @@ const App = () => {
         <Points crossScore={crossScore} circleScore={circleScore} />
         <Button className="resetButton" onClick={resetScore}>
           Reset Score
+        </Button>
+        <Button
+          className="reloadButton"
+          // color="success"
+          // block
+          onClick={reloadGame}
+        >
+          Reload the Game{" "}
         </Button>
       </div>
     </Container>
