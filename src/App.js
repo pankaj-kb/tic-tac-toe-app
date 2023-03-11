@@ -20,7 +20,7 @@ const App = () => {
     player === "cross"
       ? setCrossScore(crossScore + 1)
       : setCircleScore(circleScore + 1);
-    setWinMessage(`${player} won`)
+    player === "cross" ? setWinMessage(`X Won`) : setWinMessage(`O Won`);
   };
 
   const resetScore = (event) => {
@@ -115,10 +115,19 @@ const App = () => {
         <Col md={6} className="offset-md-3">
           {winMessage ? (
             <div className="mb-2 mt-2">
-              <h1 className="text-success text-uppercase text-center">
+              <h1
+                className={`text-uppercase text-center ${
+                  winMessage === "CIRCLE WON" ? ".crossIcon" : "circleIcon"
+                }`}
+              >
                 {winMessage}
               </h1>
-              <Button className="reloadButton" color="success" block onClick={reloadGame}>
+              <Button
+                className="reloadButton"
+                color="success"
+                block
+                onClick={reloadGame}
+              >
                 Reload the Game{" "}
               </Button>
             </div>
