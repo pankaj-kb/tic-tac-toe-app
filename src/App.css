@@ -1,4 +1,4 @@
-.light {
+.theme1 {
     background-image: linear-gradient(55deg,
             hsl(260deg 76% 46%) 0%,
             hsl(259deg 71% 48%) 2%,
@@ -24,9 +24,8 @@
             hsl(238deg 68% 61%) 100%);
 }
 
-
-.dark {
-    background-color: #ffffff;
+.theme2 {
+    background-color: cadetblue;
 }
 
 .grid {
@@ -116,4 +115,8 @@
     color: #ffffff;
     border: none;
     /* margin-top: 20px; */
+}
+
+.themeButton:hover {
+    background-color: #FF7BCE;
 }
