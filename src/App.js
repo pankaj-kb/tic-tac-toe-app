@@ -6,6 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import Icon from "./components/Icon";
 import "./App.css";
 import Points from "./components/Points";
+import ThemeProvider from "./ThemeProvider";
+import ThemeButton from "./ThemeButton";
 
 const itemArray = new Array(9).fill("empty");
 
@@ -154,6 +156,9 @@ const App = () => {
         >
           Reload the Game{" "}
         </Button>
+        <ThemeProvider>
+          <ThemeButton />
+        </ThemeProvider>
       </div>
     </Container>
   );
