@@ -3,7 +3,7 @@
 ### This is a simple tictactoe app created with React and Bootstrap CSS. The app allows users to play a classic tictactoe game with features like changing theme and storing the score of the winner.
 
 ## Live Demo
-### [You can access a live demo of the app here](https://cooltictactoeapp.netlify.app)
+### [![Live Preview](https://img.shields.io/badge/live%20preview-embed-blue?style=flat-square)](https://cooltictactoeapp.netlify.app)
 
 ## How to Use
 1. Clone the repository to your local machine
@@ -21,7 +21,3 @@
 ## Technologies Used
 - React
 - Bootstrap CSS
-
-# Preview
-
-[![Live Preview](https://img.shields.io/badge/live%20preview-embed-blue?style=flat-square)](https://cooltictactoeapp.netlify.app)
