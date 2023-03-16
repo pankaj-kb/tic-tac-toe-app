@@ -24,4 +24,4 @@
 
 # Preview
 
-<iframe src="https://cooltictactoeapp.netlify.app" width="100%" height="500"></iframe>
+[![Live Preview](https://img.shields.io/badge/live%20preview-embed-blue?style=flat-square)](https://example.com)
