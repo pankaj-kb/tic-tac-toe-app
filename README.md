@@ -24,4 +24,4 @@
 
 # Preview
 
-[![Live Preview](https://img.shields.io/badge/live%20preview-embed-blue?style=flat-square)](https://example.com)
+[![Live Preview](https://img.shields.io/badge/live%20preview-embed-blue?style=flat-square)](https://cooltictactoeapp.netlify.app)
