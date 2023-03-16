@@ -21,3 +21,7 @@
 ## Technologies Used
 - React
 - Bootstrap CSS
+
+# Preview
+
+<iframe src="https://cooltictactoeapp.netlify.app" width="100%" height="500"></iframe>
